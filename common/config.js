@@ -12,7 +12,7 @@ module.exports = {
   COOKIE_ENCRYPTION_PASS: process.env.COOKIE_ENCRYPTION_PASS, // Must be 32 characters long
   PACKS: [{
     symbol: 'DATA',
-    cards: 5,
+    cards: 10,
     price: 2,
     image: 'https://cdn.tribaldex.com/tribaldex/token-icons/DOJO.png',
     maxOpen: 12,
