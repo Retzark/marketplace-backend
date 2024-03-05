@@ -19,7 +19,7 @@ module.exports = [
 
       const {
         ACCOUNT, CURRENCY, MARKET_FEE, BONUSES,
-        SIDECHAIN_ID, SIDECHAIN_RPC, NFT_SYMBOL, PAYPAL_CLIENT_ID,
+        SIDECHAIN_ID, SIDECHAIN_RPC, NFT_SYMBOL, PAYPAL_CLIENT_ID, PACKS,
       } = config;
 
       return {
