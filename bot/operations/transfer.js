@@ -6,6 +6,8 @@ const logger = require('../../common/modules/logger');
 
 module.exports = async (data) => {
   console.log("Hive transfer", data.from);
+  console.log("Hive Block", data.block);
+  console.log("Data", data);
   try {
     if (data.to === config.ACCOUNT && data.memo.startsWith('P-')) {
       console.log("Hive transfer", data.from, data.memo, data.amount);
