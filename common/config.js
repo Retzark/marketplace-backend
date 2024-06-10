@@ -17,8 +17,8 @@ module.exports = {
       price: 2,
       image: 'https://cdn.tribaldex.com/tribaldex/token-icons/DOJO.png',
       maxOpen: 6,
-      "quantity": 1000000,
-      "remaining": 1000000,
+      quantity: 1000000,
+      remaining: 1000000,
     }
   ],
   BONUSES: [[100, 0.10], [500, 0.15], [2000, 0.20]],
