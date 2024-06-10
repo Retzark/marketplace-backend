@@ -101,8 +101,9 @@ class Stream extends EventEmiter {
       console.log("Starting block number", startBlock);
       const res = await this.getBlock(startBlock);
       let nextBlock = startBlock;
-
+      console.log(res);
       if (res) {
+        console.log("Process response");
         this.processResponse(res);
         nextBlock += 1;
       }
