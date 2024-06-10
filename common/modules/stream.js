@@ -98,7 +98,7 @@ class Stream extends EventEmiter {
       if (!startBlock) {
         startBlock = await this.getLatestBlockNumber();
       }
-
+      console.log("Starting block number", startBlock);
       const res = await this.getBlock(startBlock);
       let nextBlock = startBlock;
 
