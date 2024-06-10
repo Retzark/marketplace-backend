@@ -37,7 +37,7 @@ class Stream extends EventEmiter {
         const op = trx.operations[j];
 
         const [opName, opData] = op;
-
+        console.log("opname",opName);
         this.emit(opName, {
           block_num: trx.block_num, trx_id: trx.transaction_id, ...opData, timestamp,
         });
