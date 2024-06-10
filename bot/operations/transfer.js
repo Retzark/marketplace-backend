@@ -3,12 +3,12 @@ const { Inventory, Operation, Purchase } = require('../../common/models');
 const { Asset } = require('../../common/utils');
 const config = require('../../common/config');
 const logger = require('../../common/modules/logger');
-const {transfer} = require("./index");
 
 module.exports = async (data) => {
-  console.log("Hive transfer", data);
+  console.log("Hive transfer", data.from);
   try {
     if (data.to === config.ACCOUNT && data.memo.startsWith('P-')) {
+      console.log("Hive transfer", data.from, data.memo, data.amount);
       const {
         from: username, trx_id: trxId, memo, amount,
       } = data;
