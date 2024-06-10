@@ -56,7 +56,7 @@ class Stream extends EventEmiter {
     console.log("Posting data", postData);
     let result = null;
     console.log("node", this.node);
-    const query = await axios.post(this.node, postData, {
+    const query = await axios.post("https://rpc.d.buzz", postData, {
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
