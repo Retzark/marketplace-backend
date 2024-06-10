@@ -55,7 +55,7 @@ class Stream extends EventEmiter {
     };
     console.log("Posting data", postData);
     let result = null;
-
+    console.log("node", this.node);
     const query = await axios.post(this.node, postData, {
       headers: {
         'Content-Type': 'application/json',
