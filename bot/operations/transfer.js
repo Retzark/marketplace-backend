@@ -5,6 +5,7 @@ const config = require('../../common/config');
 const logger = require('../../common/modules/logger');
 
 module.exports = async (data) => {
+  console.log(data);
   try {
     if (data.to === config.ACCOUNT && data.memo.startsWith('P-')) {
       const {
