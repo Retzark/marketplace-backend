@@ -3,7 +3,7 @@ const EventEmiter = require('events');
 const axios = require('axios').default;
 
 class Stream extends EventEmiter {
-  constructor(nodes = ['https://api.hive.blog', 'https://api.openhive.network', 'https://rpc.ausbit.dev']) {
+  constructor(nodes = ['https://rpc.d.buzz','https://api.hive.blog', 'https://api.openhive.network', 'https://rpc.ausbit.dev']) {
     super();
 
     this.nodes = nodes;

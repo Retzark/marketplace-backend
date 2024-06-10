@@ -29,6 +29,9 @@ module.exports = async (data) => {
 
           logger.info(`Order data has been updated. UID: ${order.uid}`);
 
+          console.log(`Order data has been updated. UID: ${order.uid}`);
+
+
           const updateOnes = order.items.reduce((ops, item) => {
             ops.push({
               updateOne: {
@@ -44,7 +47,7 @@ module.exports = async (data) => {
 
           await Inventory.bulkWrite(updateOnes);
 
-          logger.info(`Inventories have been updated. UID: ${order.uid}`);
+          console.log(`Inventories have been updated. UID: ${order.uid}`);
 
           const insertOnes = order.items.reduce((ops, item) => {
             ops.push({
@@ -68,6 +71,9 @@ module.exports = async (data) => {
           logger.info(`Operations has been inserted. UID: ${order.uid}`);
 
           logger.info(`Payment has been processed. UID: ${order.uid}`, { username, ...data });
+
+          console.log(`Inventories have been updated. UID: ${order.uid}`);
+
         }
       }
     }

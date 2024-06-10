@@ -10,13 +10,17 @@ module.exports = {
   MONGODB: process.env.MONGODB,
   JWT_SECRET: process.env.JWT_SECRET,
   COOKIE_ENCRYPTION_PASS: process.env.COOKIE_ENCRYPTION_PASS, // Must be 32 characters long
-  PACKS: [{
-    symbol: 'DATA',
-    cards: 10,
-    price: 2,
-    image: 'https://cdn.tribaldex.com/tribaldex/token-icons/DOJO.png',
-    maxOpen: 12,
-  }],
+  PACKS: [
+    {
+      symbol: 'DATA',
+      cards: 10,
+      price: 2,
+      image: 'https://cdn.tribaldex.com/tribaldex/token-icons/DOJO.png',
+      maxOpen: 6,
+      "quantity": 1000000,
+      "remaining": 1000000,
+    }
+  ],
   BONUSES: [[100, 0.10], [500, 0.15], [2000, 0.20]],
   NFT_SYMBOL: 'DATA',
   PEGGED_TOKENS: [{

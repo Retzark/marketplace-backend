@@ -20,7 +20,6 @@ module.exports = [
     method: 'POST',
     path: '/purchases/start',
     options: {
-      auth: 'cookie',
       validate: {
         payload: Joi.object({
           username: Joi.string().lowercase().min(3).max(16)
@@ -107,7 +106,7 @@ module.exports = [
             const token = config.PEGGED_TOKENS.find((c) => c.symbol === currency);
 
             const amount = toFixedWithoutRounding(
-              totalPrice / token.peg, token.precision,
+               totalPrice / token.peg, token.precision,
             );
 
             paymentObj.payment = {

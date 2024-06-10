@@ -79,7 +79,6 @@ const main = async () => {
     blockProcessor: sidechainBlockProcessor,
   });
 
-  console.log(config.SIDECHAIN_RPC)
   let blockNumber = lastHEBlock + 1;
 
   if (blockNumber <= 1) {
