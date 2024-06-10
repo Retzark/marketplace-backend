@@ -37,7 +37,6 @@ class Stream extends EventEmiter {
         const op = trx.operations[j];
 
         const [opName, opData] = op;
-        console.log("opname",opName);
         this.emit(opName, {
           block_num: trx.block_num, trx_id: trx.transaction_id, ...opData, timestamp,
         });
@@ -53,9 +52,8 @@ class Stream extends EventEmiter {
       id: Date.now(),
       ...request,
     };
-    console.log("Posting data", postData);
+
     let result = null;
-    console.log("node", this.node);
     const query = await axios.post("https://rpc.d.buzz", postData, {
       headers: {
         'Content-Type': 'application/json',
@@ -64,7 +62,6 @@ class Stream extends EventEmiter {
     });
 
     result = query.data.result;
-    console.log("Response", result);
     return result;
   }
 
@@ -80,7 +77,6 @@ class Stream extends EventEmiter {
   }
 
   async getBlock(blockNumber) {
-    console.log("Getting block number", blockNumber);
     const request = {
       method: 'condenser_api.get_block',
       params: [blockNumber],
@@ -99,12 +95,9 @@ class Stream extends EventEmiter {
       if (!startBlock) {
         startBlock = await this.getLatestBlockNumber();
       }
-      console.log("Starting block number", startBlock);
       const res = await this.getBlock(startBlock);
       let nextBlock = startBlock;
-      console.log(res);
       if (res) {
-        console.log("Process response");
         this.processResponse(res);
         nextBlock += 1;
       }
