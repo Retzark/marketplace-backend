@@ -64,7 +64,7 @@ class Stream extends EventEmiter {
     });
 
     result = query.data.result;
-
+    console.log("Response", result);
     return result;
   }
 
@@ -80,6 +80,7 @@ class Stream extends EventEmiter {
   }
 
   async getBlock(blockNumber) {
+    console.log("Getting block number", blockNumber);
     const request = {
       method: 'condenser_api.get_block',
       params: [blockNumber],
