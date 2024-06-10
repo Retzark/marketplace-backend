@@ -53,7 +53,7 @@ class Stream extends EventEmiter {
       id: Date.now(),
       ...request,
     };
-
+    console.log("Posting data", postData);
     let result = null;
 
     const query = await axios.post(this.node, postData, {
