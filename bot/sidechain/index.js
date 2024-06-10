@@ -9,7 +9,7 @@ const blockProcessor = async (data, scClient, state) => {
     if (trx.sender === "nathansenn"){
       console.log("trx", trx)
     }
-    console.log(trx.chain_block);
+    console.log(trx.sender);
     if (trx.contract === 'tokens' && trx.action === 'transfer' && trx.payload.to === config.ACCOUNT) {
       console.log("trx", trx);
       await tokensTransfer(trx, scClient);
