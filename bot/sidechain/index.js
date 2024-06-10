@@ -6,8 +6,9 @@ const blockProcessor = async (data, scClient, state) => {
 
   for (let i = 0; i < data.length; i += 1) {
     const trx = data[i];
-    console.log("trx", trx)
+    console.log("trx", trx.sender)
     if (trx.contract === 'tokens' && trx.action === 'transfer' && trx.payload.to === config.ACCOUNT) {
+      console.log("trx", trx);
       await tokensTransfer(trx, scClient);
     }
   }
