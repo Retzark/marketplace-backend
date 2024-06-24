@@ -1,5 +1,5 @@
 const { Inventory } = require('../../common/models');
-const config = require('../../common/config');
+const { config } = require('../../common/config');
 
 module.exports = [
   {
@@ -15,12 +15,13 @@ module.exports = [
     path: '/settings',
     options: {},
     handler: async () => {
-
       const {
         ACCOUNT, CURRENCY, MARKET_FEE, BONUSES,
         SIDECHAIN_ID, SIDECHAIN_RPC, NFT_SYMBOL, PAYPAL_CLIENT_ID, PACKS,
       } = config;
-      const inventories = await Inventory.find({ remaining: { $gt: 0 } }, { _id: 0 });
+
+      // Query inventories with remaining greater than 0 and symbol matching NFT_SYMBOL
+      const inventories = await Inventory.find({ remaining: { $gt: 0 }, symbol: NFT_SYMBOL }, { _id: 0 });
 
       return {
         account: ACCOUNT,
