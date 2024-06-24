@@ -15,12 +15,12 @@ module.exports = [
     path: '/settings',
     options: {},
     handler: async () => {
-      const inventories = await Inventory.find({ remaining: { $gt: 0 } }, { _id: 0 });
 
       const {
         ACCOUNT, CURRENCY, MARKET_FEE, BONUSES,
         SIDECHAIN_ID, SIDECHAIN_RPC, NFT_SYMBOL, PAYPAL_CLIENT_ID, PACKS,
       } = config;
+      const inventories = await Inventory.find({ remaining: { $gt: 0 } }, { _id: 0 });
 
       return {
         account: ACCOUNT,
