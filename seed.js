@@ -16,6 +16,16 @@ const inventorySeedData = [
     remaining: 1000000,
     max_open: 6,
   },
+  {
+    symbol: 'ALPHAPACK',
+    name: 'Retzark Alpha Pack',
+    image: 'https://cdn.tribaldex.com/tribaldex/token-icons/DOJO.png',
+    cards: 5,
+    price: 5,
+    quantity: 300000,
+    remaining: 300000,
+    max_open: 6,
+  },
 ];
 
 const userSeedData = [
