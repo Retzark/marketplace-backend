@@ -1,5 +1,5 @@
 const { Inventory } = require('../../common/models');
-const { config } = require('../../common/config');
+const  config  = require('../../common/config');
 
 module.exports = [
   {
