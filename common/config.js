@@ -172,7 +172,7 @@ module.exports = {
   COINPAYMENTS_MERCHANT_ID: process.env.COINPAYMENTS_MERCHANT_ID,
   PAYPAL_CLIENT_ID: process.env.PAYPAL_CLIENT_ID,
   PRICE_API: 'https://prices.splinterlands.com/prices',
-  CURRENCY: 'SWAP.HIVE',
+  CURRENCY: 'ZARK',
   MARKET_FEE: 500,
   MINT_TYPE: 'issue', // transfer or issue
 };
